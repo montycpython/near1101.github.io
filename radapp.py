@@ -1,12 +1,12 @@
-#
+#!/usr/bin/python
+__author__ = 'Montavious'
 from flask import Flask
-__author__ = 'Monty Jones'
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "hello world"
+    return "<h1>Hello!!!!! &#x2766;</h1>"
 
 if __name__ == '__main__':
-    pass
+    app.run()
