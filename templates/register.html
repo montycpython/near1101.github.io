@@ -1,0 +1,18 @@
+{% extends "consistence.html" %}
+{% block title %}Sign Up{% endblock title %}
+
+{% block head %}
+{{ super() }}
+<link href="{{ url_for('static', filename='novelstyle.css') }}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    .important { color: #995511; }
+</style>
+{% endblock head %}
+
+{% block content %}
+<h1>Sign Up</h1>
+<p class="important">
+    Now is better than never.
+</p>
+
+{% endblock content %}

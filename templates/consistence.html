@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+{% block head %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Consistence{% endblock title %} | Res. and Dev.</title>
+{% endblock head %}
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div id="mess">
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
+{% endwith %}
+    <div id="content">
+{% block content %}{% endblock content %}
+    </div>
+    <div id="footer">
+        {% block footer %}&copy; 2016 by <a href="http://montycpython.blogspot.com">Monty of Buckhead</a>{% endblock footer %}
+    </div>
+</body>
+</html>

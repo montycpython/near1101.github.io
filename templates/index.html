@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Research and Development</title>
-</head>
-<body>
-<h1><a href="http://127.0.0.1:5000">Hello, Prospective Developers!</a></h1>
+{% extends "consistence.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <link href="{{ url_for('static', filename='novelstyle.css') }}" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Index</h1>
+  <p class="important">
+    Welcome to the Index of Research and Development.
+  </p>
+{% if name %}
+    <h1><a href="http://127.0.0.1:5000">Hello, {{ name }}!</a></h1>
+{% else %}
+    <h1><a href="http://127.0.0.1:5000">Hello, You!</a></h1>
+{% endif %}
 <p>
     "Research and Development" is a provisional title for this working.
     Its Benevolent Dictator For Life is Monty Jones of Atlanta.
@@ -30,7 +42,6 @@
 </p>
 
 <p>
-
+    <a href="/signin">Click Here to Sign In.</a>
 </p>
-</body>
-</html>
+{% endblock content %}
